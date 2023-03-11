@@ -3,8 +3,8 @@
 .people-photos {
     @include padding;
 
-    &.grey {
-        background: $grey-light;
+    h2 {
+        padding-bottom: 20px;
     }
 
     .people-photos-inner {
@@ -31,8 +31,12 @@
                 padding-right: 3%;
             }
 
+            .person-photo {
+                
+            }
+
             .person-info {
-                padding-bottom: 25px;
+                padding-bottom: 15px;
 
                 h4 {
                     @include font-bold;

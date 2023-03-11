@@ -22,9 +22,9 @@ function the_people_photos() {
             $name = get_sub_field('name');
             $title = get_sub_field('title');
             $link = get_sub_field('link');
-            print '<div class="person">
-                <div class="person-photo"><img src="' . $photo . '" /></div>
-                <div class="person-info">
+            print '<div class="person">' .
+                ( !empty( $photo ) ? '<div class="person-photo"><img src="' . $photo . '" /></div>' : '' ) .
+                '<div class="person-info">
                     <h4>' . $name . '</h4>
                     <p>' . $title . '</p>' .
                     ( !empty( $link ) ? '<a href="' . $link . '" class="btn navy">Read Bio</a>' : '' ) . 

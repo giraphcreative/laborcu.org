@@ -1,0 +1,10 @@
+
+
+.gearbox {
+    @include padding;
+    @include bg-gears;
+    @include border-top( $teal, 4 );
+    text-align: center;
+    color: white;
+}
+

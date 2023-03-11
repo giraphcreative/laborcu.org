@@ -1,0 +1,143 @@
+
+
+.article-cards {
+    @include respond-to( $bp-s ) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -3%;
+    }
+
+    .entry {
+        @include respond-to( $bp-s ) {
+            flex: 0 0 50%;
+            margin: 0 3% 3% 0;
+        }
+
+        @include respond-to( $bp-m ) {
+            flex: 0 0 30%;
+            margin: 0 3% 3% 0;
+        }
+
+        &.navy {
+            .entry-thumbnail:after { background: rgba( $navy, .45 ); }
+        }
+    
+        &.teal {
+            .entry-thumbnail:after { background: rgba( $teal, .45 ); }
+        }
+    
+        &.purple {
+            .entry-thumbnail:after { background: rgba( $purple, .45 ); }
+        }
+    
+        &.green {
+            .entry-thumbnail:after { background: rgba( $green, .45 ); }
+        }
+    
+        .entry-thumbnail {
+            max-width: 80%;
+            margin: 0 auto 10px;
+            mask: url(../img/mask-circle.svg) center center no-repeat;
+            mask-size: 100% 100%;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba( $grey, .2 );
+                pointer-events: none;
+            }
+
+            img {
+                display: block;
+                margin-bottom: 20px;
+                filter: grayscale(100%);
+            }
+        }
+
+        h4 {
+            font-size: 1.1em;
+
+            a {
+                color: $navy;
+            }
+        }
+
+        p {
+            font-size: .9em;
+        }
+
+        .post-date {
+            padding: 0;
+            opacity: .7;
+            font-size: .85em;
+        }
+    }
+}
+
+
+.single-post {
+    section.content {
+        border-top: 15px solid rgba( $grey, .2 );
+    }
+}
+
+.content-wide.article {
+    .post-date {
+        color: $grey;
+        font-size: .9em;
+    }
+
+    .post-thumbnail {
+        max-width: 400px;
+        margin: 20px auto;
+        mask: url(../img/mask-circle.svg) center center no-repeat;
+        mask-size: 100% 100%;
+        position: relative;
+
+        @include respond-to( $bp-m ) {
+            margin: 0 0 20px 20px;
+            float: right;    
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba( $teal, .4 );
+            pointer-events: none;
+        }
+
+        img {
+            display: block;
+            filter: grayscale(100%);
+        }
+    }
+
+    h1 {
+        color: $navy;
+    }
+
+    &.navy {
+        .post-thumbnail:after { background: rgba( $navy, .45 ); }
+    }
+
+    &.teal {
+        .post-thumbnail:after { background: rgba( $teal, .45 ); }
+    }
+
+    &.purple {
+        .post-thumbnail:after { background: rgba( $purple, .45 ); }
+    }
+
+    &.green {
+        .post-thumbnail:after { background: rgba( $green, .45 ); }
+    }
+}

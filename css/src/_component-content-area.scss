@@ -1,0 +1,8 @@
+
+
+.content-area {
+    @include padding;
+    @extend .content-style;
+    @include bg-grunge-gears;
+}
+

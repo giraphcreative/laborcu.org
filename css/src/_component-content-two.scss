@@ -6,6 +6,10 @@
     &.grey {
         background: $grey-light;
     }
+    
+    .column-one, .column-two {
+        @extend .content-style;
+    }
 
     @include respond-to( $bp-m ) {
         .content-columns {

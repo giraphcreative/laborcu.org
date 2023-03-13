@@ -30,29 +30,35 @@
         text-align: center;
         border: 3px solid;
         margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 60px;
 
         &.navy {
             border-image: url(../img/border-mask-navy.png) 15 24;
-            .icon-image:after { background: rgba( $navy, .4 ); }
-            .icon-button { background: $navy; @include border-top( $navy, 4 ); @include border-bottom( $navy, 3 ); }
+            .icon-image { background-color: $navy; }
+            .icon-image img { @include tint( 'navy' ); }
+            .icon-button { background: $navy; }
         }
 
         &.teal {
             border-image: url(../img/border-mask-teal.png) 15 24;
-            .icon-image:after { background: rgba( $teal, .4 ); }
-            .icon-button { background: $teal; @include border-top( $teal, 4 ); @include border-bottom( $teal, 3 ); }
+            .icon-image { background-color: $teal; }
+            .icon-image img { @include tint( 'teal' ); }
+            .icon-button { background: $teal; }
         }
 
         &.purple {
             border-image: url(../img/border-mask-purple.png) 15 24;
-            .icon-image:after { background: rgba( $purple, .4 ); }
-            .icon-button { background: $purple; @include border-top( $purple, 4 ); @include border-bottom( $purple, 3 ); }
+            .icon-image { background-color: $purple; }
+            .icon-image img { @include tint( 'purple' ); }
+            .icon-button { background: $purple; }
         }
 
         &.green {
             border-image: url(../img/border-mask-green.png) 15 24;
-            .icon-image:after { background: rgba( $green, .5 ); }
-            .icon-button { background: $green; @include border-top( $green, 4 ); @include border-bottom( $green, 3 ); }
+            .icon-image { background-color: $green; }
+            .icon-image img { @include tint( 'green' ); }
+            .icon-button { background: $green; }
         }
 
         a {
@@ -64,17 +70,11 @@
 
             img {
                 display: block;
-                filter: grayscale( 1 );
             }
-
-            &:after {
-                position: absolute;
-                content: '';
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-            }
+        }
+        &.no-image-treatment .icon-image {
+            background-color: none;
+            img { filter: none; }
         }
 
         .icon-container {
@@ -100,6 +100,10 @@
             font-size: 1.7em;
             margin-top: 20px;
             margin-bottom: 1px;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
 
             &:hover {
                 text-decoration: none;

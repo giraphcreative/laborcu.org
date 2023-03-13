@@ -38,6 +38,7 @@
             .accordion-content {
                 @include bg-grunge-gears;
                 @include padding-side( 25px, 35px );
+                @extend .content-style;
                 display: none;
             }
 

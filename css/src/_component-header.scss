@@ -30,24 +30,28 @@
         &.navy {
             background: $navy;
             background: linear-gradient( 90deg, rgba( $navy, 1 ) 0%, rgba( $navy, 1 ) 50%, rgba( $navy, .3 ) 100% );
+            backdrop-filter: tint-filter( 'navy' );
             @include border-bottom( $navy-light, 2 );
         }
 
         &.teal {
             background: $teal;
             background: linear-gradient( 90deg, rgba( $teal, 1 ) 0%, rgba( $teal, 1 ) 50%, rgba( $teal, .3 ) 100% );
+            backdrop-filter: tint-filter( 'teal' );
             @include border-bottom( $teal-light, 2 );
         }
 
         &.purple {
             background: $purple;
             background: linear-gradient( 90deg, rgba( $purple, 1 ) 0%, rgba( $purple, 1 ) 50%, rgba( $purple, .3 ) 100% );
+            backdrop-filter: tint-filter( 'purple' );
             @include border-bottom( $purple-light, 2 );
         }
 
         &.green {
             background: $green;
             background: linear-gradient( 90deg, rgba( $green, 1 ) 0%, rgba( $green, 1 ) 50%, rgba( $green, .3 ) 100% );
+            backdrop-filter: tint-filter( 'green' );
             @include border-bottom( $green-light, 2 );
         }
 

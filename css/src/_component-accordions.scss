@@ -8,6 +8,41 @@
 
     .accordions-inner {
         .accordion {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                top: 25px;
+                right: 20px;
+                font-size: 3em;
+                content: '\000BB';
+                @include font-eveleth;
+                font-weight: bold;
+                color: white;
+                z-index: 1;
+                transition: transform 300ms ease-in-out;
+                transform: rotate( -90deg );
+                pointer-events: none;
+
+                @include respond-to( $bp-m ) {
+                    top: 27px;
+                    right: 30px;
+                }
+
+                @include respond-to( $bp-l ) {
+                    right: 40px;
+                }
+
+                @include respond-to( $bp-xl ) {
+                    top: 30px;
+                    right: 50px;
+                }
+            }
+
+            &.open:before {
+                transform: rotate( 90deg );
+            }
+
             &:first-child .accordion-title {
                 border-top: 1px solid rgba( $navy, .2 );
             }
@@ -23,16 +58,10 @@
                 letter-spacing: .5px;
                 cursor: pointer;
                 @include padding-side( 15px, 25px );
+                padding-right: 50px;
                 background: $grey;
                 @include border-top( $grey-light, 4, 0 );
                 @include border-bottom( $grey-light, 1, 0 );
-
-                &:before {
-                    position: absolute;
-                    right: 0;
-                    font-size: 1.2em;
-                    content: '+';
-                }
             }
 
             .accordion-content {
@@ -50,7 +79,7 @@
                 }
 
                 .accordion-content {
-                    display: block;
+                    //display: block;
                 }
             }
 

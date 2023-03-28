@@ -7,6 +7,7 @@ jQuery(document).ready(function($){
 
 		$( '.accordions .accordion .accordion-title' ).click(function(){
 			$( this ).parent( '.accordion' ).toggleClass( 'open' );
+			$( this ).next( '.accordion-content' ).slideToggle( 300 );
 		});
 
 	}

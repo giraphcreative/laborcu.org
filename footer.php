@@ -51,10 +51,13 @@ $admin_email = get_option( 'admin_email' );
 			</div>
 			<div class="wide two">
 				<div class="social-icons">
-					<a href="<?php print get_field( 'social-twitter', 'option' ) ?>" class="icon-gear" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social-twitter.svg" class="social-icon" /></a>
-					<a href="<?php print get_field( 'social-facebook', 'option' ) ?>" class="icon-gear" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social-facebook.svg" class="social-icon" /></a>
-					<a href="<?php print get_field( 'social-instagram', 'option' ) ?>" class="icon-gear" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social-instagram.svg" class="social-icon" /></a>
-					<a href="<?php print get_field( 'social-linkedin', 'option' ) ?>" class="icon-gear" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social-linkedin.svg" class="social-icon" /></a>
+					<?php  
+					theme_social_icon( 'twitter' );
+					theme_social_icon( 'facebook' );
+					theme_social_icon( 'instagram' );
+					theme_social_icon( 'linkedin' );
+					theme_social_icon( 'youtube' );
+					?>
 				</div>
 				<div class="footer-aux">
 					<?php wp_nav_menu( array( 'theme_location' => 'footer-aux', 'menu_class' => 'nav-menu' ) ); ?>

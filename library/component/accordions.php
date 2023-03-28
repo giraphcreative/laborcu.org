@@ -24,7 +24,7 @@ function the_accordions() {
             $open = get_sub_field('open');
             print '<div class="accordion ' . ( $open ? 'open' : '' ) . ' ' . $color . '">
                 <div class="accordion-title">' . $title . '</div>
-                <div class="accordion-content">' . $content . '</div>
+                <div class="accordion-content"' . ( $open ? 'style="display: block;"' : '' ) . '>' . $content . '</div>
             </div>';
 
         endwhile;

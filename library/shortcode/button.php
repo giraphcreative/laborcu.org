@@ -43,6 +43,7 @@ add_action('init', 'btn_add_mce_button');
 
 // register new button in the editor
 function btn_register_mce_button( $buttons ) {
+	array_push( $buttons, 'superscript' );
 	array_push( $buttons, 'btn_mce_button' );
 	return $buttons;
 }

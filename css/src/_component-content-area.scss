@@ -4,5 +4,17 @@
     @include padding;
     @extend .content-style;
     @include bg-grunge-gears;
+    
+    &.no-pad {
+        @include padding-side( 0, 0 );
+    }
+
+    &.no-pad-top {
+        @include padding-side( 0, 30px );
+    }
+
+    &.no-pad-bottom {
+        @include padding-side( 30px, 0 );
+    }
 }
 

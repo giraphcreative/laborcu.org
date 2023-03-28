@@ -2,6 +2,7 @@
 
 .people {
     @include padding;
+    @include bg-grunge-gears;
 
     &.grey {
         background: $grey-light;

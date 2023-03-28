@@ -2,6 +2,7 @@
 
 .people-photos {
     @include padding;
+    @include bg-grunge-gears;
 
     h2 {
         padding-bottom: 20px;

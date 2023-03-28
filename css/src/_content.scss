@@ -83,13 +83,26 @@
 
 	table {
 		width: 100%;
+		margin: 10px 0;
 
 		tr {
+			&.even td { background: rgba( white, .4 ); }
+			&.odd td { background: rgba( $navy, .01 ); }
+
+			th {
+				background: rgba( $navy, .05 );
+				color: $grey-dark;
+			}
+
 			td {
 				vertical-align: top;
 				padding: 6px 10px;
 			}
 		}
+	}
+
+	.map {
+		margin: 15px 0;
 	}
 }
 

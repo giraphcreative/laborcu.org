@@ -60,8 +60,8 @@
                 @include padding-side( 15px, 25px );
                 padding-right: 50px;
                 background: $grey;
-                @include border-top( $grey-light, 4, 0 );
-                @include border-bottom( $grey-light, 1, 0 );
+                @include border-top( lighten( $grey, 10% ), 4, 0 );
+                @include border-bottom( lighten( $grey, 10% ), 1, 0 );
             }
 
             .accordion-content {

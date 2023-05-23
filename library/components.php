@@ -5,7 +5,7 @@
 require_multi( 
     'component/header', 'component/icons', 'component/rates', 'component/icon-list', 'component/blockquote', 'component/promotion', 
     'component/separator', 'component/content', 'component/content-two', 'component/people-photos', 'component/people',
-    'component/button-columns', 'component/accordions', 'component/post-list', 'component/slides', 'component/gearbox' );
+    'component/button-columns', 'component/accordions', 'component/post-list', 'component/slides', 'component/gearbox', 'component/spacer' );
 
 
 function the_components() {
@@ -25,6 +25,9 @@ function the_components() {
 
             elseif ( get_row_layout() == 'separator' ): 
                 the_separator();
+                    
+            elseif ( get_row_layout() == 'spacer' ): 
+                the_spacer();
                 
             elseif ( get_row_layout() == 'content' ): 
                 the_content_area();

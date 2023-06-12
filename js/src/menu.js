@@ -32,8 +32,11 @@ jQuery(document).ready(function($){
 
 	});
 
+	// store the position of the menu from the top of the page
+	var nav_top = $( 'header nav' ).offset().top;
+
     // fixed position nav on larger screens
-    $( window ).scroll(function(){
+	$( window ).scroll(function(){
 
 		// if the window is wider than 1024
         if ( $( window ).width() >= 1024 ) {
@@ -42,14 +45,17 @@ jQuery(document).ready(function($){
 			menu.css( 'width', $( '.container' ).width() );
 
 			// if we've scrolled past the header, the menu switches to fixed position
-			if ( $( window ).scrollTop() > $( 'header .wrap' ).height() ) {
+			if ( $( window ).scrollTop() > nav_top ) {
 				header.addClass( 'fixed' );
 
 				// if the online banking area wasn't manually opened, close it
 				if ( !$( '.online-banking' ).hasClass( 'manual' ) ) {
 					$( '.online-banking' ).removeClass( 'open' );
 				}
+
 			} else {
+
+				// we aren't past the header, remove the class.
 				header.removeClass( 'fixed' );
 			}
         }

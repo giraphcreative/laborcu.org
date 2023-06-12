@@ -25,7 +25,7 @@ $bp-xxl: 1440px;
 @import "mixins", "fonts", "reset", "base", "grid", "form";
 
 // import layout components
-@import "header", "content", "sidebar", "footer";
+@import "notice", "header", "content", "sidebar", "footer";
 
 // import shortcode styles
 @import "button", "articles";

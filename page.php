@@ -6,4 +6,3 @@ the_components();
 
 get_footer();
 
-?>

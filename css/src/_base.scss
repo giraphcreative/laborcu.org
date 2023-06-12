@@ -79,6 +79,14 @@ a {
 	}
 }
 
+em, i {
+	@include font-italic;
+}
+
+em b, em strong, strong em, b em, b i, strong i, i strong, i b {
+	@include font-bold-italic;
+}
+
 code, pre {
 	font-family: monospace;
 	background-color: #eee;

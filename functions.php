@@ -14,7 +14,7 @@ function require_multi( $files ) {
 
 
 // include utility functions
-require_multi( 'core', 'admin', 'images', 'paginate', 'components' );
+require_multi( 'core', 'admin', 'images', 'components', 'paginate', 'notice' );
 
 
 require_multi( 'shortcode/button', 'shortcode/articles' );

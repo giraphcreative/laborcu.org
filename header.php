@@ -31,6 +31,7 @@
 
 </head>
 <body <?php body_class(); ?>>
+<?php the_notice_bar(); ?>
 <div class="container">
 <header>
 

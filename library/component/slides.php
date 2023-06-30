@@ -14,10 +14,11 @@ function the_slides() {
             $background = get_sub_field('background');
             $content = get_sub_field('content');
             $link = get_sub_field('link');
+            $color = get_sub_field('color');
             ?>
-            <div class="slide<?php print ( $num == 0 ? ' visible' : '' ) . ( !empty( $link ) ? ' has-link' : '' ); ?>"
-                <?php if ( !empty( $link ) ) { ?>data-href="<?php print $link ?>"<?php } ?>
-                style="background-image: url(<?php print $background; ?>);">
+            <div class="slide<?php print ( $num == 0 ? ' visible' : '' ) . ( !empty( $link ) ? ' has-link' : '' ); print ' ' . $color ?>"
+                <?php if ( !empty( $link ) ) { ?>data-href="<?php print $link ?>"<?php } ?>>
+                <div class="slide-background" style="background-image: url(<?php print $background; ?>);"></div>
                 <div class="slide-content">
                     <div class="slide-content-inner">
                         <?php print $content ?>

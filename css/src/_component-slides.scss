@@ -13,11 +13,85 @@
         top: 0;
         left: 0;
         transition: all 500ms ease-in-out;
-        background: center center / cover no-repeat;
         height: 100%;
         width: 100%;
         opacity: 0;
         z-index: 0;
+
+        .slide-background {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: center center / cover no-repeat;
+        }
+
+        &.navy, &.purple, &.teal, &.green {
+            background: white;
+
+            .slide-content {
+                h1, h2, h3 {
+                    color: white;
+                }
+
+                h4, h5, h6 {
+                    color: rgba( white, .7 );
+                }    
+
+                p {
+                    color: rgba( white, .8 );
+                }
+            }
+        }
+        
+        &.navy {
+            background-color: $navy;
+
+            .slide-background {
+                @include tint( 'navy' );
+            }
+
+            .slide-content {
+                background: linear-gradient( 90deg, rgba( $navy, .9 ) 0%, rgba( $navy, .7 ) 70%, rgba( $navy, 0 ) 100% );
+            }
+        }
+
+        &.green {
+            background-color: $green;
+
+            .slide-background {
+                @include tint( 'green' );
+            }
+
+            .slide-content {
+                background: linear-gradient( 90deg, rgba( $green, .9 ) 0%, rgba( $green, .7 ) 70%, rgba( $green, 0 ) 100% );
+            }
+        }
+
+        &.purple {
+            background-color: $purple;
+
+            .slide-background {
+                @include tint( 'purple' );
+            }
+
+            .slide-content {
+                background: linear-gradient( 90deg, rgba( $purple, .9 ) 0%, rgba( $purple, .7 ) 70%, rgba( $purple, 0 ) 100% );
+            }
+        }
+
+        &.teal {
+            background-color: $teal;
+
+            .slide-background {
+                @include tint( 'teal' );
+            }
+
+            .slide-content {
+                background: linear-gradient( 90deg, rgba( $teal, .9 ) 0%, rgba( $teal, .7 ) 70%, rgba( $teal, 0 ) 100% );
+            }
+        }
 
         &.visible {
             z-index: 1;
@@ -41,24 +115,36 @@
             align-items: center;
             justify-content: center;
             height: 100%;
-            padding: 40px;
-            @include respond-to( $bp-l ) { padding: 30px 80px; }
-            @include respond-to( $bp-xl ) { padding: 35px 120px; }
+            padding: 40px 40px 40px 50px;
+        
+            @include respond-to( $bp-s ) {
+                right: 30%;
+                padding: 40px 60px 40px 70px;
+            }
         
             @include respond-to( $bp-m ) {
-                right: 50%;
+                right: 40%;
+                padding: 40px 60px 40px 70px;
+            }
+        
+            @include respond-to( $bp-xl ) {
+                right: 45%;
+                padding: 40px 60px 40px 90px;
             }
 
-            .slides-content-inner {
-                flex: 1;
+            .slide-content-inner {
+                flex-basis: 100%;
+            }
+
+            .btn {
+                margin-bottom: 5px;
             }
 
             h1, h2, h3 {
                 @include font-holtzman;
-                font-size: 2.3em;
-                line-height: 1.1em;
+                font-size: 2em;
+                line-height: .85em;
                 text-transform: uppercase;
-                text-shadow: 0 0 15px rgba( white, .4 );
                 color: $navy;
 
                 @include respond-to( $bp-m ) {
@@ -74,10 +160,23 @@
                 }
             }
 
+            h4, h5, h6 {
+                @include font-eveleth;
+                color: rgba( $navy, .7 );
+                padding: 8px 0;
+                font-size: 1.2em;
+                line-height: 1.2em;
+
+                @include respond-to( $bp-m ) {
+                    font-size: 1.4em;
+                    padding: 12px 0;
+                }
+            }
+
             p {
                 font-size: 1.1em;
                 line-height: 1.2em;
-                text-shadow: 0 0 15px rgba( white, .4 );
+                color: rgba( $navy, .8 );
 
                 @include respond-to( $bp-l ) {
                     font-size: 1.3em;

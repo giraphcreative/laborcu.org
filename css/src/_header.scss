@@ -200,6 +200,10 @@ header {
 					background: linear-gradient( 90deg, rgba( $navy-light, 1 ) 0%, rgba( $navy, 1 ) 15%, rgba( $navy-light, 1 ) 85%, rgba( $teal, 1 ) 100% );
 				}
 			}
+
+			.btn {
+				width: 100%;
+			}
 		}
 	}
 

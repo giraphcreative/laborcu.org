@@ -16,6 +16,7 @@ jQuery(document).ready(function($) {
 		// prompt the user and if they confirm the prompt, proceed to the third party site.
 		if ( the_link.hasClass( 'bypass' ) ||
 			the_link_href.match( /labor.jpederson.io/i ) || 
+			the_link_href.match( /dolfcu.giraph.io/i ) ||
 			the_link_href.match( /dolfcu.org/i ) ||
 			the_link_href.match( /itsme247.com/i ) ||	
 			the_link_href.match( /joinmycu.com/i ) || 

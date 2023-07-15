@@ -17,5 +17,5 @@ function require_multi( $files ) {
 require_multi( 'core', 'admin', 'images', 'components', 'paginate', 'notice' );
 
 
+// include the shortcodes
 require_multi( 'shortcode/button', 'shortcode/articles' );
-

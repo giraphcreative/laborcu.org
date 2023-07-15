@@ -5,7 +5,7 @@
 require_multi( 
     'component/header', 'component/icons', 'component/rates', 'component/icon-list', 'component/blockquote', 'component/promotion', 
     'component/separator', 'component/content', 'component/content-two', 'component/people-photos', 'component/people',
-    'component/button-columns', 'component/accordions', 'component/post-list', 'component/slides', 'component/gearbox', 'component/spacer' );
+    'component/button-columns', 'component/accordions', 'component/post-list', 'component/slides', 'component/gearbox', 'component/spacer', 'component/anchor' );
 
 
 function the_components() {
@@ -67,6 +67,9 @@ function the_components() {
             
             elseif ( get_row_layout() == 'post_list' ): 
                 the_post_list();
+                                
+            elseif ( get_row_layout() == 'anchor' ): 
+                the_anchor();
                             
             endif;
 

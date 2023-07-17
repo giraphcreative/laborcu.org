@@ -22,10 +22,13 @@ $bp-xxl: 1440px;
 
 
 // import all the things
-@import "mixins", "fonts", "reset", "base", "grid", "form";
+@import "mixins", "fonts", "reset", "base";
 
 // import layout components
 @import "notice", "header", "content", "sidebar", "footer";
+
+// form styles
+@import "form";
 
 // import shortcode styles
 @import "button", "articles";
@@ -34,6 +37,7 @@ $bp-xxl: 1440px;
 @import "component-header", "component-blockquote", "component-promotion", "component-gearbox", "component-icons", "component-icon-list",
     "component-separator", "component-content-area", "component-content-two", "component-people-photos", "component-people",
     "component-button-columns", "component-accordions", "component-post-list", "component-slides", "component-rates", "component-spacer";
+
 
 // import lightbox styles
 @import "magnific";

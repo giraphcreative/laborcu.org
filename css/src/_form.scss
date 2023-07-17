@@ -5,8 +5,7 @@
 	display: inline-block;
 	padding: 6px 8px;
 	max-width: 100%;
-	font-size: 14px;
-	line-height: 30px;
+	font-size: 15px;
 	line-height: 1.5em;
 	border: 3px solid rgba( $grey, .1 );
 	border-radius: 5px;
@@ -21,42 +20,18 @@ button, input[type=submit] {
 	@extend .btn;
 }
 
+.gform_fields {
+	padding: 0 !important;
+}
 
-.gform_wrapper {
+
+.gform_wrapper.gravity-theme .description, .gform_wrapper.gravity-theme .gfield_description, .gform_wrapper.gravity-theme .gsection_description, .gform_wrapper.gravity-theme .instruction {
+	@include font;
+}
+
+
+.gform_body {
 	padding: 15px 0;
-
-	// some global field styles for donate form only
-	.short-form {
-		.gfield {
-			margin: 10px 0 !important;
-
-			.ginput_container {
-				margin-top: 5px !important;
-			}
-
-			.gfield_description {
-				padding-top: 0;
-			}
-
-			::placeholder {
-				color: #ddd;
-			}
-
-			&.field_description_below.gsection {
-				margin: 50px 0 10px !important;
-
-				@include respond-to( 768px ) {
-					margin: 80px 0 15px !important;
-				}
-
-				&:first-child {
-					margin: 0 0 15px !important;
-					@include respond-to( 768px ) { margin: 0 0 15px !important; }
-				}
-			}
-		}
-	}
-	
 
 	// lets set some padding on all text fields.	
 	input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), textarea {
@@ -68,21 +43,12 @@ button, input[type=submit] {
 		}
 	}
 
-	
-	.gsection_description {
-		font-size: .9em;
-	}
-
-
-	span.ginput_total {
-		font-size: 1.5em;
-		font-weight: bold;
-		color: $grey;
-	}
-
-
 	// some styles for radio button fields
 	.gfield {
+		.gfield_label {
+			@include font;
+		}
+
 		&.inline-radio, &.donate-amount {
 			.gfield_radio {
 				width: auto !important;
@@ -105,8 +71,11 @@ button, input[type=submit] {
 			margin-top: -20px !important;
 			margin-bottom: 20px !important;
 		}
+		
+		&.gfield-has-description .gfield_description {
+			@include font;
+		}
 	}
-	
 
 	// big huge green buttons for all form submit buttons.
 	.gform_footer {

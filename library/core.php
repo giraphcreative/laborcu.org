@@ -31,16 +31,10 @@ register_sidebar( array(
 ) );
 
 
-// hide the editor from pages
-add_action( 'init', 'hide_editor' );
-function hide_editor() {
-    remove_post_type_support('page', 'editor');
-}
-
-
 function theme_social_icon( $network ) {
 	$social_link = get_field( 'social-' . $network, 'option' );
 	if ( !empty( $social_link ) ) {
 		?><a href="<?php print $social_link ?>" class="icon-gear" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social/<?php print $network ?>.svg" class="social-icon" /></a><?php
 	}
 }
+

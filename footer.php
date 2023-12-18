@@ -8,7 +8,6 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-$admin_email = get_option( 'admin_email' );
 ?>
 	
 	</section>
@@ -69,5 +68,12 @@ $admin_email = get_option( 'admin_email' );
 </div><!-- #container -->
 
 <?php wp_footer(); ?>
+
+<?php 
+if ( is_page( 10952 ) ) {
+	print the_field( 'footer_code', 'option' );
+}
+?>
+
 </body>
 </html>

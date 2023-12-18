@@ -41,8 +41,12 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 
+<?php print the_field( 'header_code', 'option' ); ?>
+
 </head>
 <body <?php body_class(); ?>>
+<?php print the_field( 'body_code', 'option' ); ?>
+
 <?php do_action( 'wp_body_open' ); ?>
 
 <!-- gtag manager noscript -->

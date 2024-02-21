@@ -43,6 +43,8 @@
 
 <?php print the_field( 'header_code', 'option' ); ?>
 
+<script async src="https://api.glia.com/salemove_integration.js"></script>
+
 </head>
 <body <?php body_class(); ?>>
 <?php print the_field( 'body_code', 'option' ); ?>

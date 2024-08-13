@@ -48,7 +48,7 @@
 				<a href="#"><img src="<?php bloginfo('template_url') ?>/img/app-ios.svg" /></a>
 				<a href="#"><img src="<?php bloginfo('template_url') ?>/img/app-google.svg" /></a>
 			</div>
-			<div class="narrow">
+			<div class="narrow ncua">
 				<img src="<?php bloginfo( 'template_url' ) ?>/img/icon-equal-housing.png" /> &nbsp;
 				<img src="<?php bloginfo( 'template_url' ) ?>/img/icon-ncua.png" />
 			</div>

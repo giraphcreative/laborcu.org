@@ -45,6 +45,12 @@ footer {
 				text-align: left;
 				font-size: .8em;
 			}
+
+			&.ncua {
+				@include respond-to( $bp-m ) {
+					text-align: left;
+				}
+			}
 		}
 	
 		.app-icons {

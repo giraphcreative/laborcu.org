@@ -39,6 +39,8 @@ header {
 
 		@include respond-to( $bp-m ) {
 			flex: 0 0 280px;
+			padding-top: 50px;
+			padding-bottom: 20px;
 		}
 
 		.social-icons {
@@ -104,11 +106,11 @@ header {
 
 		.routing {
 			padding: 10px 0 0;
-			font-size: .8em;
+			font-size: 1em;
 			text-align: center;
 
 			@include respond-to( $bp-m ) {
-				padding: 5px 0 10px;
+				padding: 10px 0 10px;
 				text-align: right;
 			}
 		}
@@ -121,7 +123,7 @@ header {
 			@include respond-to( $bp-m ) {
 				position: absolute;
 				z-index: 1002;
-				top: 154px;
+				top: 139px;
 				right: 30px;
 				background: white;
 				border-radius: 0;
@@ -130,16 +132,16 @@ header {
 
 			@include respond-to( $bp-l ) {
 				right: 50px;
+				width: 280px;
 			}
 
 			@include respond-to( $bp-xl ) {
 				right: 70px;
-				width: 280px;
 			}
 
 			@include respond-to( $bp-xxl ) {
 				right: 90px;
-				top: 156px;
+				top: 141px;
 			}
 
 			&.open {
@@ -286,7 +288,7 @@ header {
 				}
 
 				@include respond-to( $bp-l ) {
-					margin-right: 20px;
+					margin-right: 10px;
 				}
 
 				a {
@@ -306,6 +308,11 @@ header {
 						display: inline-block;
 						text-align: left;
 						padding: 15px 10px 18px;
+					}
+
+					@include respond-to( $bp-l ) {
+						font-size: 30px;
+						padding: 15px 12px 18px;
 					}
 
 					@include respond-to( $bp-l ) {

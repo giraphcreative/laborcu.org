@@ -14,13 +14,13 @@
 	
 	<footer class="footer">
 		<div class="footer-columns">
-			<div class="narrow">
+			<div class="narrow logo">
 				<img src="<?php bloginfo( 'template_url' ) ?>/img/logo-white.svg" class="logo-footer" />
 				<div class="footer-address">
 					<?php print apply_filters( 'the_content', get_field( 'footer-address', 'option' ) ); ?>
 				</div>
 			</div>
-			<div class="wide">
+			<div class="wide footer-menus">
 				<div class="footer-menu">
 					<h4><?php print wp_get_nav_menu_name("footer-menu-one" ); ?></h4>
 					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-one', 'menu_class' => 'nav-menu' ) ); ?>
@@ -44,11 +44,19 @@
 			</div>
 		</div>
 		<div class="footer-columns">
+			<div class="app-icons mobile-only">
+				<a href="#"><img src="<?php bloginfo('template_url') ?>/img/app-ios.svg" /></a>
+				<a href="#"><img src="<?php bloginfo('template_url') ?>/img/app-google.svg" /></a>
+			</div>
 			<div class="narrow">
 				<img src="<?php bloginfo( 'template_url' ) ?>/img/icon-equal-housing.png" /> &nbsp;
 				<img src="<?php bloginfo( 'template_url' ) ?>/img/icon-ncua.png" />
 			</div>
 			<div class="wide two">
+				<div class="app-icons no-mobile">
+					<a href="#"><img src="<?php bloginfo('template_url') ?>/img/app-ios.svg" /></a>
+					<a href="#"><img src="<?php bloginfo('template_url') ?>/img/app-google.svg" /></a>
+				</div>
 				<div class="social-icons">
 					<?php  
 					theme_social_icon( 'twitter' );
@@ -58,9 +66,11 @@
 					theme_social_icon( 'youtube' );
 					?>
 				</div>
+				<!--
 				<div class="footer-aux">
-					<?php wp_nav_menu( array( 'theme_location' => 'footer-aux', 'menu_class' => 'nav-menu' ) ); ?>
+					<?php // wp_nav_menu( array( 'theme_location' => 'footer-aux', 'menu_class' => 'nav-menu' ) ); ?>
 				</div>
+				-->
 			</div>
 		</div>
 	</footer>

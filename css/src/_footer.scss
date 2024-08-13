@@ -1,30 +1,12 @@
 
 
 footer {
-	@include clearfix;
 	@include padding;
 	background: $navy;
 	color: white;
 	line-height: 1.5em;
 	padding-bottom: 0 !important;
 	@include border-top( $green, 3 );
-
-	.narrow {
-		padding-bottom: 20px;
-
-		img {
-			max-width: 250px;
-			padding-bottom: 20px;
-		}
-	}
-
-	.wide {
-		padding-bottom: 20px;
-	}
-
-	.footer-address {
-		font-size: .8em;
-	}
 
 	a {
 		transition: color 400ms ease-in-out;
@@ -36,24 +18,165 @@ footer {
 		}
 	}
 
-	.footer-menu {
-		h4 {
-			text-transform: uppercase;
-			color: white;
+	.footer-columns {
+		@include respond-to( $bp-m ) {
+			display: flex;
 		}
 
-		padding: 10px 0;
-		font-size: .9em;
-	}
+		.narrow {
+			padding-bottom: 20px;
+			text-align: center;
+
+			@include respond-to( $bp-m ) {
+				flex: 1;
+				flex-basis: 25%;
+				padding: 10px 0 20px;
+			}
+
+			@include respond-to( $bp-l ) {
+				flex-basis: 22%;
+			}
+
+			img {
+				max-width: 250px;
+			}
+			
+			.footer-address {
+				text-align: left;
+				font-size: .8em;
+			}
+		}
 	
+		.app-icons {
+			padding-bottom: 20px;
+			text-align: center;
+
+			a {
+				opacity: .6;
+				transition: opacity 400ms ease-in-out;
+	
+				&:hover {
+					opacity: 1;
+				}
+	
+				img {
+					height: 40px;
+				}
+			}
+		}
+
+		.wide {
+			padding-bottom: 20px;
+
+			@include respond-to( $bp-m ) {		
+				flex: 1;
+				flex-basis: 72%;
+				padding: 0 0 20px 2%;
+				display: flex;
+				flex-wrap: wrap;
+
+				&.two {
+					padding-top: 10px;
+
+				}
+			}
+
+			@include respond-to( $bp-l ) {
+				flex-wrap: nowrap;
+				flex-basis: 76%;
+
+				.footer-menu {
+					flex-basis: 20%;
+				}
+			}		
+
+			.footer-menu {
+				font-size: .9em;
+				margin-bottom: 3px;
+
+				ul {
+					display: none;
+					padding: 5px 11px 20px;
+
+					@include respond-to( $bp-m ) {
+						display: block;
+						padding: 0;
+					}
+				}
+
+				h4 {
+					position: relative;
+					text-transform: uppercase;
+					color: white;
+					border: 1px solid rgba( white, .4);
+					background: rgba( white, .1 );
+					padding: 5px 10px;
+					cursor: pointer;
+					font-size: 1.2em;
+
+					&:after {
+						position: absolute;
+						content: "\290B";
+						top: 50%;
+						right: 10px;
+						margin-top: -10px;
+						line-height: 20px;
+						transition: all 300ms ease-in-out;
+					}
+
+					@include respond-to( $bp-m ) {
+						border: none;
+						background: none;
+						padding: 5px 0;
+						cursor: auto;
+						
+						&:after {
+							display: none;
+						}
+					}
+				}
+
+				&.open {
+					h4 {
+						&:after {
+							transform: rotate( 180deg );
+						}
+					}
+
+					ul {
+						display: block;
+					}
+				}
+
+				@include respond-to( $bp-m ) {		
+					flex: 1;
+					flex-basis: 50%;
+					padding: 10px 20px;
+					border-left: 2px solid rgba( white, .2 );
+				}
+
+				@include respond-to( $bp-l ) {
+					flex-basis: 20%;
+				}
+			}
+		}
+	}
+
 	.social-icons {
 		padding-bottom: 20px;
-		
+		text-align: center;
+
+		@include respond-to( $bp-m ) {
+			flex: 1;
+			text-align: right;
+			padding-bottom: 0;
+		}
+
 		.icon-gear {
 			display: inline-block;
-			width: 48px;
-			height: 48px;
-			padding: 13px;
+			width: 44px;
+			height: 44px;
+			padding: 11px;
 			margin-right: 5px;
 			background: url(../img/bg-icon-gear-navy-light.svg) center center / cover no-repeat;
 			transition: opacity 400ms ease-in-out;
@@ -69,84 +192,5 @@ footer {
 				opacity: 1;
 			}
 		}
-	}
-
-	.footer-aux {
-		a {
-			font-size: .8em;
-			line-height: 1.2em;
-		}
-	}
-
-	.footer-columns {
-		@include respond-to( $bp-m ) {
-			display: flex;
-
-			.narrow {
-				flex: 1;
-				flex-basis: 25%;
-				padding: 10px 0 20px;
-			}
-		
-			.wide {
-				flex: 1;
-				flex-basis: 72%;
-				padding: 0 0 20px 3%;
-				display: flex;
-				flex-wrap: wrap;
-
-				.footer-menu {
-					flex: 1;
-					flex-basis: 50%;
-					padding: 10px 20px;
-					border-left: 2px solid rgba( white, .2 );
-				}
-
-				&.two {
-					padding-top: 10px;
-
-					.social-icons {
-						flex: 1;
-						flex-basis: 50%;
-						text-align: right;
-						padding-bottom: 0;
-					}
-
-					.footer-aux {
-						flex: 1;
-						padding-left: 20px;
-						flex-basis: 50%;
-					}
-				}
-			}
-		}
-
-		@include respond-to( $bp-l ) {
-			.narrow {
-				flex-basis: 22%;
-			}
-
-			.wide {
-				flex-wrap: nowrap;
-				flex-basis: 75%;
-
-				.footer-menu {
-					flex-basis: 20%;
-				}
-
-				&.two {
-					.social-icons {
-						flex: 1;
-						flex-basis: 80%;
-						text-align: right;
-					}
-
-					.footer-aux {
-						flex: 1;
-						flex-basis: 20%;
-					}
-				}
-			}
-		}		
 	}
 }

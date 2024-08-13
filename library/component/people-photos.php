@@ -40,4 +40,3 @@ function the_people_photos() {
     
 }
 
-

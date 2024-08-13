@@ -34,7 +34,7 @@ register_sidebar( array(
 function theme_social_icon( $network ) {
 	$social_link = get_field( 'social-' . $network, 'option' );
 	if ( !empty( $social_link ) ) {
-		?><a href="<?php print $social_link ?>" class="icon-gear" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social/<?php print $network ?>.svg" class="social-icon" /></a><?php
+		?><a href="<?php print $social_link ?>" class="icon-gear" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social/<?php print $network ?>.svg?v=1" class="social-icon" /></a><?php
 	}
 }
 

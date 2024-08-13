@@ -27,7 +27,7 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=2" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=3" rel="stylesheet" type="text/css">
 
 <!-- gtag manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-59VD46M');</script>
@@ -68,6 +68,7 @@
 		</div>
 
 		<div class="aux">
+			<!--
 			<div class="social-icons">
 				<?php  
 				theme_social_icon( 'twitter' );
@@ -77,14 +78,15 @@
 				theme_social_icon( 'youtube' );
 				?>
 			</div>
+			-->
 
 			<div class="search">
 				<?php get_search_form() ?>
 			</div>
 
-			<div class="routing">Routing #: 254074426</div>
+			<div class="routing">Routing Number: 254074426</div>
 
-			<div class="online-banking<?php if ( is_front_page() ) { print ' open'; } ?>">
+			<div class="online-banking">
 				<a href="#" class="online-banking-button">Online Banking</a>
 				<div class="online-banking-form">
 					<?php print get_field( 'online_banking_form', 'option' ); ?>

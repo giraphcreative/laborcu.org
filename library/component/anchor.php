@@ -1,10 +1,9 @@
 <?php
 
-// output the anchor
-function the_anchor() {
 
-    // if it's an anchor
-    $label = get_sub_field( 'label' );
-    if ( !empty( $label ) ) print '<a name="' . $label . '"></a>';
-    
-}
+// get the anchor label
+$label = get_sub_field( 'label' );
+
+// if it's not empty, display it
+if ( !empty( $label ) ) print '<a name="' . $label . '"></a>';
+

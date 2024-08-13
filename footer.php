@@ -15,7 +15,7 @@
 	<footer class="footer">
 		<div class="footer-columns">
 			<div class="narrow logo">
-				<img src="<?php bloginfo( 'template_url' ) ?>/img/logo-white.svg" class="logo-footer" />
+				<a href="/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo-white.svg" class="logo-footer" /></a>
 				<div class="footer-address">
 					<?php print apply_filters( 'the_content', get_field( 'footer-address', 'option' ) ); ?>
 				</div>

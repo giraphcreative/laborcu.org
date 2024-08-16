@@ -20,3 +20,4 @@ if ( !empty( $content_one ) && !empty( $content_two ) ){
     <?php
 }
 
+

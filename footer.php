@@ -45,8 +45,8 @@
 		</div>
 		<div class="footer-columns">
 			<div class="app-icons mobile-only">
-				<a href="https://apps.apple.com/us/app/labor-credit-union/id1021294136?ls=1"><img src="<?php bloginfo('template_url') ?>/img/app-ios.svg" /></a>
-				<a href="https://play.google.com/store/apps/details?id=org.dolfcu.dolfcu&pli=1"><img src="<?php bloginfo('template_url') ?>/img/app-google.svg" /></a>
+				<a href="<?php the_field( 'app-ios', 'option' ) ?>"><img src="<?php bloginfo('template_url') ?>/img/app-ios.svg" /></a>
+				<a href="<?php the_field( 'app-google', 'option' ) ?>"><img src="<?php bloginfo('template_url') ?>/img/app-google.svg" /></a>
 			</div>
 			<div class="narrow ncua">
 				<img src="<?php bloginfo( 'template_url' ) ?>/img/icon-equal-housing.png" /> &nbsp;
@@ -54,8 +54,8 @@
 			</div>
 			<div class="wide two">
 				<div class="app-icons no-mobile">
-					<a href="https://apps.apple.com/us/app/labor-credit-union/id1021294136?ls=1"><img src="<?php bloginfo('template_url') ?>/img/app-ios.svg" /></a>
-					<a href="https://play.google.com/store/apps/details?id=org.dolfcu.dolfcu&pli=1"><img src="<?php bloginfo('template_url') ?>/img/app-google.svg" /></a>
+					<a href="<?php the_field( 'app-ios', 'option' ) ?>"><img src="<?php bloginfo('template_url') ?>/img/app-ios.svg" /></a>
+					<a href="<?php the_field( 'app-google', 'option' ) ?>"><img src="<?php bloginfo('template_url') ?>/img/app-google.svg" /></a>
 				</div>
 				<div class="social-icons">
 					<?php  

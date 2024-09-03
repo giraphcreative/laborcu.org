@@ -84,7 +84,8 @@
 				<?php get_search_form() ?>
 			</div>
 
-			<div class="routing">Routing Number: 254074426</div>
+			<div class="quick-links"><?php wp_nav_menu( array( 'theme_location' => 'header-aux', 'menu_class' => 'nav-menu' ) ); ?></div>
+			<!-- <div class="routing">Routing Number: 254074426</div> -->
 
 			<div class="online-banking">
 				<a href="#" class="online-banking-button">Online Banking</a>

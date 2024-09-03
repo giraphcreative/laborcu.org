@@ -11,6 +11,7 @@ add_action( 'wp_enqueue_scripts', 'p_scripts' );
 // register a couple nav menus
 register_nav_menus( array(
 	'main-menu' => 'Main',
+	'header-aux' => 'Header (Auxiliary Links)',
 	'footer-menu-one' => 'Footer (One)',
 	'footer-menu-two' => 'Footer (Two)',
 	'footer-menu-three' => 'Footer (Three)',

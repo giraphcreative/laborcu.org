@@ -7,11 +7,11 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMYSX890BF"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', 'G-CMYSX890BF');
+gtag('config', 'G-CMYSX890BF');
 </script>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -41,13 +41,13 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 
-<?php print the_field( 'header_code', 'option' ); ?>
+<?php print get_field( 'header_code', 'option' ); ?>
 
 <script async src="https://api.glia.com/salemove_integration.js"></script>
 
 </head>
 <body <?php body_class(); ?>>
-<?php print the_field( 'body_code', 'option' ); ?>
+<?php print get_field( 'body_code', 'option' ); ?>
 
 <?php do_action( 'wp_body_open' ); ?>
 

@@ -79,11 +79,7 @@
 
 <?php wp_footer(); ?>
 
-<?php 
-if ( is_page( 10952 ) ) {
-	print the_field( 'footer_code', 'option' );
-}
-?>
+<?php print get_field( 'footer_code', 'option' ); ?>
 
 </body>
 </html>

@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 		var the_link = $( this );
 		var the_link_href = the_link.attr( 'href' );
 
-		console.log( the_link_href );
+		//console.log( the_link_href );
 
 		// prompt the user and if they confirm the prompt, proceed to the third party site.
 		if ( the_link.hasClass( 'bypass' ) ||

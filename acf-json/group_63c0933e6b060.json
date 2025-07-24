@@ -76,7 +76,9 @@
                             "ajax": 0,
                             "placeholder": "",
                             "allow_custom": 0,
-                            "search_placeholder": ""
+                            "search_placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
                         },
                         {
                             "key": "field_63c093ebba27e",
@@ -231,6 +233,8 @@
                                     "placeholder": "",
                                     "allow_custom": 0,
                                     "search_placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
                                     "parent_repeater": "field_63fa8aaa186df"
                                 },
                                 {
@@ -272,7 +276,7 @@
                 "layout_63c18e2b9b863": {
                     "key": "layout_63c18e2b9b863",
                     "name": "content",
-                    "label": "Content Area",
+                    "label": "Content (One Column)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -323,7 +327,9 @@
                             "ajax": 0,
                             "placeholder": "",
                             "allow_custom": 0,
-                            "search_placeholder": ""
+                            "search_placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
                         }
                     ],
                     "min": "",
@@ -413,7 +419,9 @@
                             "ajax": 0,
                             "placeholder": "",
                             "allow_custom": 0,
-                            "search_placeholder": ""
+                            "search_placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
                         }
                     ],
                     "min": "",
@@ -466,6 +474,8 @@
                             "ui": 0,
                             "ajax": 0,
                             "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
                             "allow_custom": 0,
                             "search_placeholder": ""
                         }
@@ -666,6 +676,8 @@
                                     "placeholder": "",
                                     "allow_custom": 0,
                                     "search_placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
                                     "parent_repeater": "field_63c0985290213"
                                 },
                                 {
@@ -1007,6 +1019,8 @@
                                     "placeholder": "",
                                     "allow_custom": 0,
                                     "search_placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
                                     "parent_repeater": "field_640c9ce51cab1"
                                 },
                                 {
@@ -1125,7 +1139,9 @@
                             "ajax": 0,
                             "placeholder": "",
                             "allow_custom": 0,
-                            "search_placeholder": ""
+                            "search_placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
                         }
                     ],
                     "min": "",
@@ -1286,6 +1302,8 @@
                                     "placeholder": "",
                                     "allow_custom": 0,
                                     "search_placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
                                     "parent_repeater": "field_63c57c863830f"
                                 },
                                 {
@@ -1421,7 +1439,9 @@
                             "ajax": 0,
                             "placeholder": "",
                             "allow_custom": 0,
-                            "search_placeholder": ""
+                            "search_placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
                         }
                     ],
                     "min": "",
@@ -1486,6 +1506,8 @@
                             "ui": 0,
                             "ajax": 0,
                             "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
                             "allow_custom": 0,
                             "search_placeholder": ""
                         },
@@ -1721,6 +1743,8 @@
                             "ui": 0,
                             "ajax": 0,
                             "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
                             "allow_custom": 0,
                             "search_placeholder": ""
                         }
@@ -1762,6 +1786,126 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_modal_edit_size": false,
+                    "acfe_flexible_category": false
+                },
+                "layout_6851bd87ca310": {
+                    "key": "layout_6851bd87ca310",
+                    "name": "testimonials",
+                    "label": "Testimonials",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_685b0c8c98e78",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "default_value": "What they are Saying",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "maxlength": "",
+                            "acfe_permissions": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6851bd8eca312",
+                            "label": "Quote",
+                            "name": "quote",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "acfe_repeater_stylised_button": 0,
+                            "layout": "block",
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "acfe_permissions": "",
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_6851bd9eca313",
+                                    "label": "Content",
+                                    "name": "content",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "relevanssi_exclude": 0,
+                                    "default_value": "",
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "allow_in_bindings": 0,
+                                    "tabs": "visual",
+                                    "toolbar": "basic",
+                                    "media_upload": 0,
+                                    "delay": 0,
+                                    "parent_repeater": "field_6851bd8eca312"
+                                },
+                                {
+                                    "key": "field_6851bdb7ca314",
+                                    "label": "Attribution",
+                                    "name": "attribution",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Person who gave the quote.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "relevanssi_exclude": 0,
+                                    "default_value": "",
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_6851bd8eca312"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -1841,5 +1985,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1723583863
+    "modified": 1750797486
 }

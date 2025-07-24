@@ -1,0 +1,45 @@
+
+
+.testimonials {
+    h2 {
+        background: $teal;
+        padding: 10px 0 15px;
+        text-align: center;
+        font-size: 2.8em;
+        color: white;
+        @include border-top( $teal, 2 );
+        @include border-bottom( $teal, 1 );
+    }
+
+    .testimonials-inner {
+        @include padding;
+
+        .quote {
+            background: url(../img/bg-testimonial-quote.png) top left no-repeat;
+            padding-top: 130px;
+            color: $navy;
+            display: none;
+            min-height: 260px;
+
+            &.visible {
+                display: block;
+            }
+
+            @include respond-to( $bp-m ) {
+                padding-left: 150px;
+                padding-top: 0;
+            }
+
+            @include respond-to( $bp-xl ) {
+                padding-left: 170px;
+                padding-top: 0;
+            }
+
+            .attribution {
+                @include font-holtzman;
+                font-size: 2em;
+            }
+        }
+    }
+}
+

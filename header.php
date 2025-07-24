@@ -43,8 +43,6 @@ gtag('config', 'G-CMYSX890BF');
 
 <?php print get_field( 'header_code', 'option' ); ?>
 
-<script async src="https://api.glia.com/salemove_integration.js"></script>
-
 </head>
 <body <?php body_class(); ?>>
 <?php print get_field( 'body_code', 'option' ); ?>

@@ -9,7 +9,8 @@ function articles_shortcode( $atts ) {
 		'cats' => '',
 		'category__not_in' => '',
 		'post_type' => 'post',
-		'posts_per_page' => 4
+		'posts_per_page' => 4,
+        'show_excerpt' => true
 	), $atts );
 
 	$args = array(
@@ -50,7 +51,9 @@ function articles_shortcode( $atts ) {
             $return .= '<div class="entry-inner">';
             $return .= '<h5><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h5>';
             $return .= '<p class="post-date">' . get_the_date() . '</p>';
-            $return .= wpautop( get_the_excerpt() );
+            if ( $a['show_excerpt'] ) {
+                $return .= wpautop( get_the_excerpt() );
+            }
             $return .= '<p><a href="' . get_the_permalink() . '" class="btn ' . $color . '">Read More</a></p>';
             $return .= '</div>';
             $return .= '</div>';

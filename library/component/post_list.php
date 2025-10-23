@@ -16,7 +16,7 @@ if ( !empty( $category ) ) :
         </div>
         <?php } ?>
         <div class="post-list">
-            <?php print do_shortcode( '[articles cats="' . $category . '" posts_per_page="' . $posts_per_page . '" /]' ); ?>
+            <?php print do_shortcode( '[articles cats="' . $category . '" posts_per_page="' . $posts_per_page . '" show_excerpt=0 /]' ); ?>
         </div>
     </div>
     <?php
